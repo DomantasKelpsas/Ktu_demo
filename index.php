@@ -57,7 +57,7 @@
 
     <div class="container h-100 w-50">
         <!-- FORMA -->
-        <form  method="post" class="form col-12 rounded p-5 m-1">
+        <form  action="data.php" method="post" class="form col-12 rounded p-5 m-1">
             <div class="row justify-content-center mb-4">
                 <h1 class="justify-content-center text-uppercase">Registracija</h1>
             </div>
