@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,10 +17,10 @@
 <div>
     <?php
     if (isset($_POST['register'])) {
-        echo "<div class='bg-success text-center text-white text-uppercase'>submitted</div> ";
+        echo "<div class='bg-success text-center text-white text-uppercase'>submitted</div>";
 
     } else
-        echo "<div class='bg-danger text-center text-white text-uppercase'>not working</div> ";
+        echo "<div class='bg-danger text-center text-white text-uppercase'>not working</div>";
     ?>
 </div>
 
@@ -56,17 +57,19 @@
     </div>
 
     <div class="container h-100 w-50">
+
         <!-- FORMA -->
         <form  action="data.php" method="post" class="form col-12 rounded p-5 m-1">
             <div class="row justify-content-center mb-4">
                 <h1 class="justify-content-center text-uppercase">Registracija</h1>
             </div>
 
-            <div class="form-goup row py-2">
+            <div class="form-group has-error has-feedback row py-2">
 
                 <div class="col-6">
                     <label class="font-weight-bold">Vardas</label>
                     <input type="text" name="name" class="form-control" placeholder="Vardas">
+                    <span class="help-text">anjv</span>
                 </div>
                 <div class="col-6">
                     <label class="font-weight-bold">Pavarde</label>
@@ -77,16 +80,16 @@
             <div class="form-group row py-2">
                 <div class="col-3">
                     <label class="font-weight-bold">Lytis</label>
-                    <select name="sex" class="form-control">
-                        <option>Vyras</option>
-                        <option>Moteris</option>
-                        <option>Unknown</option>
+                    <select name="gender" class="form-control">
+                        <option value="1">Vyras</option>
+                        <option value="2">Moteris</option>
+                        <option value="0">Unknown</option>
                     </select>
 
                 </div>
                 <div class="col-3">
                     <label class="font-weight-bold">Gimimo Data</label>
-                    <input type="date" name="birthday" class="form-control" value="1999-03-08">
+                    <input type="date" name="birthdate" class="form-control" value="1999-03-08">
                 </div>
             </div>
 
@@ -108,11 +111,11 @@
                 <div class="col-4">
                     <label for="distance" class="font-weight-bold">Atstumas</label>
                     <select name="distance" class="form-control">
-                        <option>8 km</option>
-                        <option>4 km</option>
-                        <option>2 km</option>
-                        <option>1 km</option>
-                        <option>400 m</option>
+                        <option value="1">8 km</option>
+                        <option value="2">4 km</option>
+                        <option value="3">2 km</option>
+                        <option value="4">1 km</option>
+                        <option value="5">400 m</option>
                     </select>
                 </div>
                 <div class="col-8">

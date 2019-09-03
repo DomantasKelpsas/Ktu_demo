@@ -1,12 +1,11 @@
 <?php
 
 
-define('DB_USER', "root");
-define('DB_PASSWORD', "");
-define('DB_DATABASE', "register_form");
-define('DB_HOST', "localhost");
+$dbhost = 'localhost';
+$dbname = 'register_form';
+$dbusername = 'root';
+$dbpassword = '';
 
-
-$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE);
+$link = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbusername, $dbpassword);
 
 ?>
