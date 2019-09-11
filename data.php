@@ -9,6 +9,9 @@ require('config.php');
 $statement = $link->prepare("INSERT INTO register_table (name, surname, gender,birthdate,country,city,organisation,distance,phone,email)
     VALUES (?,?,?,?,?,?,?,?,?,?)");
 
+
+
+
 $statement->execute([
         $_POST['name'],
         $_POST['surname'],
@@ -23,3 +26,7 @@ $statement->execute([
     ]);
 
 //$statement->debugDumpParams();
+
+
+
+//require('index.php');

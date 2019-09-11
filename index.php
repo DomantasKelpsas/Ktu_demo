@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -58,8 +57,8 @@
 
     <div class="container h-100 w-50">
 
-        <!-- FORMA -->
-        <form  action="data.php" method="post" class="form col-12 rounded p-5 m-1">
+        <!-- FORMA   action="data.php" -->
+        <form id="register-form" method="post" class="form col-12 rounded p-5 m-1">
             <div class="row justify-content-center mb-4">
                 <h1 class="justify-content-center text-uppercase">Registracija</h1>
             </div>
@@ -68,19 +67,19 @@
 
                 <div class="col-6">
                     <label class="font-weight-bold">Vardas</label>
-                    <input type="text" name="name" class="form-control" placeholder="Vardas">
+                    <input id="name" type="text" name="name" class="form-control" placeholder="Vardas">
                     <span class="help-text">anjv</span>
                 </div>
                 <div class="col-6">
                     <label class="font-weight-bold">Pavarde</label>
-                    <input type="text" name="surname" class="form-control" placeholder="Pavarde">
+                    <input id="surname" type="text" name="surname" class="form-control" placeholder="Pavarde">
                 </div>
 
             </div>
             <div class="form-group row py-2">
                 <div class="col-3">
                     <label class="font-weight-bold">Lytis</label>
-                    <select name="gender" class="form-control">
+                    <select id="gender" name="gender" class="form-control">
                         <option value="1">Vyras</option>
                         <option value="2">Moteris</option>
                         <option value="0">Unknown</option>
@@ -96,11 +95,11 @@
             <div class="form-group row py-2">
                 <div class="col-4">
                     <label class="font-weight-bold">Šalis</label>
-                    <input type="text" name="country" class="form-control" placeholder="Šalis">
+                    <input id="country" type="text" name="country" class="form-control" placeholder="Šalis">
                 </div>
                 <div class="col-4">
                     <label class="font-weight-bold">Miestas</label>
-                    <input type="text" name="city" class="form-control" placeholder="Miestas">
+                    <input id="city" type="text" name="city" class="form-control" placeholder="Miestas">
                 </div>
                 <div class="col-4">
                     <label class="font-weight-bold">Organizacija</label>
@@ -177,7 +176,8 @@
                 apklausą po renginio, siekiant įvertinti renginio kokybę ir sužinoti dalyvių atsiliepimus (pažymėti
                 neprivaloma)</label>
             <div class="row w-100 py-2 justify-content-end">
-                <button type="submit" name="register" class="btn btn-lg btn-primary px-5">Registruotis</button>
+                <button id="register" type="submit" name="register" class="btn btn-lg btn-primary px-5">Registruotis
+                </button>
 
             </div>
         </form>
@@ -189,11 +189,9 @@
 
 </section>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+<script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
@@ -201,6 +199,29 @@
 <script type="text/javascript" src="js/functions.js">
 
 </script>
+
+
+<script>
+
+    // $("#register-form").submit(function(e) {
+    //     e.preventDefault();
+    // });
+    //
+    //
+    // $("#register").click(function () {
+    //     var x = $('#name').val();
+    //     console.log(x);
+    // });
+
+    $("#register-form").submit(function( event ) {
+        console.log( $( this ).serializeArray() );
+        event.preventDefault();
+    });
+
+
+
+</script>
+
 </body>
 
 </html>

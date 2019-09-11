@@ -6,3 +6,6 @@ function myFunction() {
          $('#tshirt-options-col').css('display','none');
        }
 }
+
+//PRINT TO CONSOLE
+
